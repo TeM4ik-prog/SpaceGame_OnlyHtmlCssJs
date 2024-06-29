@@ -50,7 +50,7 @@ for (let p = 0; p < need_players - 1; p++) {
 
 
     let need_img = copy_ship.querySelector('img')
-    need_img.src = Ar_color_ships[number_players - 2]
+    need_img.src = './public/' + Ar_color_ships[number_players - 2]
 
     allScreen.appendChild(copy_ship)
 
