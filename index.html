@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<style>
+    #all {
+
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        overflow: hidden;
+
+        background-position-x: 0px;
+        background-position-y: 0px;
+        /* background-size: 100% 100%; */
+
+        transition: 0.5s linear;
+        background-image: url("public/space1.png");
+
+    }
+
+    .all_bytts {
+        position: absolute;
+        display: inline-flex;
+        flex-direction: column;
+        width: 40%;
+        min-width: 190px;
+        z-index: 1;
+        filter: blur(0px);
+        margin: 0 auto;
+        justify-content: flex-end;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .butt {
+        margin: 10px;
+        background-color: aqua;
+        border: 5px solid;
+        border-radius: 10px;
+        filter: blur(0px);
+        width: 100%;
+        box-shadow: 10px 10px 3px;
+        transition: 0.5s;
+    }
+
+
+    .butt:hover {
+        background-color: rgb(1, 201, 201);
+        transform: scale(110%);
+
+    }
+
+    .text_bytt_space,
+    .text_bytt_space_player {
+        text-align: center;
+        font-size: 30px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .text_bytt_space_player {
+        font-size: calc(30px + 2vw);
+        position: absolute;
+        margin: 0%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+        transition: 0.5s;
+        
+
+    }
+
+    #info {
+        position: absolute;
+        width: 80%;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgb(161, 247, 22);
+        display: inline-flex;
+        flex-direction: column;
+        text-align: center;
+        visibility: hidden;
+    }
+
+    #gameover,
+    #your_score {
+        margin: 2%;
+        font-size: calc(calc(7.5vw + 1px));
+
+    }
+
+    #statistic_screen {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+        min-height: 200px;
+        border: solid 5px black;
+        border-radius: 50px;
+        background-color: rgb(7, 97, 176);
+        z-index: 5;
+        visibility: hidden;
+    }
+
+    #numb_players {
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+    }
+
+    .player {
+        width: calc(30% + 1px);
+        height: calc(30% + 1px);
+        border: 3px solid black;
+        border-radius: 10px;
+        margin: 5%;
+        background-color: chartreuse;
+        font-size: calc(300%+ 10px);
+        text-align: center;
+        transition: 0.5s;
+        perspective: 100px;
+
+    }
+
+    .player:hover {
+        background-color: rgb(40, 45, 180);
+        border: 5px double rgb(255, 218, 218);
+        color: bisque;
+
+
+    }
+
+    .player:hover .text_bytt_space_player {
+        text-shadow: -10px -10px 5px rgba(125, 125, 125, 0.7);
+
+    }
+</style>
+
+
+<body id="all">
+    <div id="statistic_screen">
+        <div id="numb_players">
+            <div class="player" id="2p">
+                <p class="text_bytt_space_player">P2</p>
+            </div>
+            <div class="player" id="3p">
+                <p class="text_bytt_space_player">P3</p>
+            </div>
+            <div class="player" id="4p">
+                <p class="text_bytt_space_player">P4</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="info">
+        <h3 id="gameover">ИГРА ОКОНЧЕНА</h3>
+        <h3 id="your_score">ВАШ СЧЕТ:</h3>
+    </div>
+
+    <div class="all_bytts">
+        <button class='butt' id="new_game">
+            <p class="text_bytt_space">Новая игра</p>
+        </button>
+
+        <button class='butt' id="multiplayer">
+            <p class="text_bytt_space">Мультиплеер</p>
+        </button>
+
+    </div>
+
+
+
+
+
+</body>
+
+<script src="./JSmain space_game.js"></script>
+
+
+</html>
