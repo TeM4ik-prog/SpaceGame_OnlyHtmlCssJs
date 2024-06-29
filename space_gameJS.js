@@ -23,7 +23,7 @@ let can_use_boost = false
 let boosted = false
 
 let screen_delete_bullet
-let screen_speed = 50//скорости движения заднего фона
+let screen_speed = 50//скорости движения заднего фона.
 
 let XPos = 0
 let YPos = 0
